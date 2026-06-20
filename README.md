@@ -1,49 +1,52 @@
-# Starlight Starter Kit: Basics
+# Label Alchemy — Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Source for the **Label Alchemy** documentation site, published at
+**[docs.labelalchemy.dev](https://docs.labelalchemy.dev)**.
 
-```
-npm create astro@latest -- --template starlight
-```
+Label Alchemy is a VS Code extension that converts hard-coded user-facing strings in Salesforce
+Apex, LWC, and Aura code into Custom Labels — deterministic by default, with optional AI-assisted
+naming (BYOK).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- 🧩 **Install:** [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ramprasad94.labelalchemy)
+- 🌐 **Website:** [labelalchemy.dev](https://labelalchemy.dev)
+- 💬 **Support & community:** [github.com/Ramprasad94/labelalchemy](https://github.com/Ramprasad94/labelalchemy)
 
-## 🚀 Project Structure
+Built with [Astro Starlight](https://starlight.astro.build/) and deployed on Vercel.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Project structure
 
 ```
 .
-├── public/
+├── public/                  # favicon, OG image, static assets
 ├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
+│   ├── assets/              # logo (light/dark)
+│   ├── content/docs/        # one Markdown/MDX file per page (flat slugs)
+│   ├── styles/custom.css    # brand theming (indigo/violet, Inter + JetBrains Mono)
 │   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+├── astro.config.mjs         # site config, sidebar, fonts, OG metadata
+├── vercel.json
+└── package.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Pages live in `src/content/docs/` as flat slugs (`install.md` → `/install/`); the sidebar grouping
+is configured in `astro.config.mjs`.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Local development
 
-Static assets, like favicons, can be placed in the `public/` directory.
+```bash
+npm install        # install dependencies
+npm run dev        # dev server at http://localhost:4321
+npm run build      # production build to ./dist/
+npm run preview    # preview the production build locally
+```
 
-## 🧞 Commands
+## Deployment
 
-All commands are run from the root of the project, from a terminal:
+Pushing to `main` triggers a Vercel production deploy (framework auto-detected as Astro;
+see `vercel.json`). The custom domain `docs.labelalchemy.dev` is configured in the Vercel project.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Contributing
 
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Found an error in the docs or want to suggest an improvement? Open an issue or discussion in the
+[community repository](https://github.com/Ramprasad94/labelalchemy), or use the **Edit page** link
+at the bottom of any page on [docs.labelalchemy.dev](https://docs.labelalchemy.dev).
