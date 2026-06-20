@@ -164,7 +164,7 @@ Org` [Paid] — all prefixed **Label Alchemy:** in the Command Palette.
 | `aiNamingGuidance` | Extra free-text instructions appended to the AI naming prompt |
 | `aiGenerateDescriptions` | Also write a Description for each label (extra tokens) |
 | `labelNameCase` | `snake` (default) or `pascal` for new names |
-| `labelPrefix` | Prefix prepended to all generated names |
+| `labelPrefix` | String prepended to every generated label **name** (e.g. `MyApp_`); does not change the `c.` reference namespace |
 | `denylist` | Your custom denylist terms (Paid; built-in technical list is always on) |
 | `scanTestClasses` | Include Apex test classes in folder scans (off by default) |
 | `audit.minutesPerString` / `audit.hourlyRate` | Audit Report cost-estimate assumptions |
