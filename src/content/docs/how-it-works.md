@@ -96,7 +96,15 @@ Click **Approve Selected** and Label Alchemy writes the changes:
 Everything happens in memory first — files are only written after all transformations are
 ready, so a partial failure doesn't leave your code in a broken state.
 
-## Stage 5 — Deploy [Pro]
+**Duplicate guard (Paid):** automatic reuse collapses identical text to one label. With a license,
+Label Alchemy also catches a value that already has a label under a *different* name and prompts you
+to reuse the existing label or create a new one before writing.
+
+**Change record:** every convert writes a timestamped folder to `labelalchemy-changes/` — a
+`summary.md`, `summary.csv`, and a portable `package.xml` — and shows a one-click **Open summary**
+notification. No git required.
+
+## Stage 5 — Deploy [Paid]
 
 After applying, Label Alchemy offers a one-click deploy to a connected Salesforce org:
 

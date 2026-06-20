@@ -42,15 +42,27 @@ See [AI provider setup](/providers/#capability-test) for the per-provider checkl
   orgs are hard-blocked by design, with no override.
 - **"No deployable files"** — the selected path contains no Apex, LWC, Aura, or CustomLabels files.
 
-Deploy to Org is a [Pro feature](/license-activation/).
+Deploy to Org is a [Paid feature](/license-activation/) — it requires a license.
 
 ## License key not accepted
 
 - Use the key from your Lemon Squeezy purchase email — keys are **case-sensitive** and must have
   no extra spaces.
-- If the key was already activated on another machine, email **support@labelalchemy.dev**.
 - If validation is failing due to a network outage, a [3-day grace period](/license-activation/#offline--validation-grace-period)
-  keeps Pro working if you'd activated successfully before.
+  keeps paid features working if you'd activated successfully before.
+
+## "Activation limit reached"
+
+Your license activates a limited number of devices. On a machine you no longer use, run **Label
+Alchemy: Deactivate License on This Device** to free the seat, then re-enter the key on the new
+machine. See [Moving the license between machines](/license-activation/#moving-the-license-between-machines).
+
+## My custom denylist terms aren't being applied
+
+The custom denylist requires a license — without one, only the always-on built-in technical denylist
+applies. With a license, manage your terms via **Label Alchemy: Edit Custom Denylist** or the
+**Manage denylist** link in the Audit Report. Matching is whole-value and case-insensitive (no
+substrings or wildcards), so add the exact string you want ignored.
 
 ## Still stuck?
 

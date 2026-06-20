@@ -47,4 +47,4 @@ If the commands don't appear, see [Troubleshooting](/troubleshooting/).
 
 - [Convert your first string → Quick Start](/quick-start/)
 - [Enable AI naming (optional) → Provider setup](/providers/)
-- [Activate a Pro license → License activation](/license-activation/)
+- [Activate a license → License activation](/license-activation/)

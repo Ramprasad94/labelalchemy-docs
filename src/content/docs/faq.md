@@ -50,7 +50,10 @@ for whichever provider you use. Your key is stored in VS Code's encrypted secret
 used only to call the provider's API on your behalf.
 
 **Can I use AI naming for free?**
-Yes — if you use Ollama or LM Studio. Both run local models on your machine at $0.
+Yes. Per-file AI naming works on the free tier — and if you use Ollama or LM Studio, the model runs
+locally on your machine at $0. **Project-wide AI naming** (which reuses your existing labels and
+follows your naming convention across the whole codebase) requires a license; without one, AI naming
+falls back to per-file scope.
 
 **Can I edit AI-suggested names?**
 Yes. Every name — whether deterministic or AI-suggested — is editable in the diff panel before
@@ -102,6 +105,17 @@ LWC `{binding}` syntax in HTML requires a getter in the sibling JavaScript file.
 adds the `@salesforce/label` import and getter automatically so the binding resolves. Without
 this step, the LWC component would fail to deploy.
 
+**Can I organize labels into categories?**
+Yes, free. Set a Salesforce category on labels right in the review panel — per label, or across a
+whole file in one click. It writes to the label's `<categories>`, so labels arrive in your org
+already sorted.
+
+**Does Label Alchemy keep a record of what it changed?**
+Yes — on every convert, no git required. It writes a timestamped folder to `labelalchemy-changes/`
+containing a readable `summary.md`, a `summary.csv`, and a portable `package.xml` you can deploy or
+hand to a teammate. A one-click **Open summary** notification appears when the conversion finishes.
+This is free on every tier.
+
 **Can I undo a conversion?**
 Yes — through git. Label Alchemy writes to disk, but it doesn't commit anything. A `git checkout`
 or `git restore` reverts the changes. We recommend converting on a branch so you can PR-review
@@ -121,34 +135,34 @@ prefix is prepended to all generated names.
 **Is the free tier really free? No card required?**
 Yes. Scan, name, review, and apply on single files — no account, no credit card.
 
-**What does Pro add?**
-Bulk convert (apply conversions across all files from an Audit Report), Deploy to Org (one-click
-deploy after converting), and Audit CSV export — plus all roadmap features as they ship.
-[Pricing →](https://labelalchemy.dev/#pricing)
+**What do the Paid features add?**
+Bulk convert across your whole project, deploy to org on approve, project-wide AI naming, a custom
+denylist, diverging-name duplicate detection, and Audit CSV export — plus priority email support.
+See the full breakdown in [Features](/features/).
 
 **Is it a subscription?**
-The Individual license is a one-time purchase — $49 personal, $99 commercial — that you own
-forever, with free updates to version 1. Only the Team tier is a subscription, at $15/seat/month
-(3-seat minimum, or $144/seat/year). At launch, a **Founding Member** early-bird gives the first
-100 buyers the full license for $29 one-time (regularly $49). See [License activation](/license-activation/)
-for how it works.
+No. The Individual license is a **one-time, perpetual purchase** — the version you buy is yours to
+keep forever. It includes a 12-month window of updates; after that, your version keeps working and
+only newer features lock until you renew updates. A per-seat **Team** plan is coming soon. For all
+current prices, the founding-member offer, and renewal costs, see
+[labelalchemy.dev/#pricing](https://labelalchemy.dev/#pricing).
 
 **Is there regional pricing for India or other markets?**
-Yes. Lemon Squeezy's Purchasing Power Parity pricing applies automatically at checkout —
-approximately 40–50% off for India and other high-Salesforce-ecosystem markets. No code needed.
+Yes. Lemon Squeezy's Purchasing Power Parity pricing applies automatically at checkout for India and
+other markets. No code needed.
 
 **Is the license per machine or per user?**
-Per user (validated by VS Code machine ID). Contact support if you work across multiple
-machines. The Team tier supports multiple seats. [More on activation →](/license-activation/)
+It activates a limited number of devices (seats). You can move it yourself with **Label Alchemy:
+Deactivate License on This Device** on the old machine, then re-enter the key on the new one — see
+[License activation](/license-activation/).
 
 **What happens if my internet is down and license validation fails?**
 Label Alchemy has a 3-day grace period. If it validated successfully before and can't reach the
 license server now, you continue working normally. A warning is shown after 1 day.
 
-**What's on the roadmap for Pro?**
-Conflict detection (flag strings that already match an existing label), reuse suggestions
-(propose an existing label before creating a new one), and org-level reporting. Subscribers
-receive these as they ship at no extra cost. [See the roadmap →](https://github.com/Ramprasad94/labelalchemy/blob/main/ROADMAP.md)
+**What's on the roadmap?**
+Directional next-ups include a PR / git-diff CI scan, deeper project-context AI naming, and async
+batch deploy. See the public [roadmap →](https://github.com/Ramprasad94/labelalchemy/blob/main/ROADMAP.md).
 
 **Can I use the extension in CI?**
 The extension runs in the VS Code UI context, not as a standalone CLI. It's designed for

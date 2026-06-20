@@ -57,8 +57,11 @@ After approving:
 
 1. **Your source file** is updated — hard-coded strings replaced with the correct SF references
    (`System.Label.X` for Apex, `{getter}` for LWC HTML, etc.)
-2. **`CustomLabels.labels-meta.xml`** is updated with the new label entries
+2. **`CustomLabels.labels-meta.xml`** is updated with the new label entries (you can set a category
+   on labels in the review panel before approving)
 3. For LWC HTML changes, the sibling `.js` is automatically updated with the import + getter
+4. A **change record** is written to `labelalchemy-changes/` — a `summary.md`, `summary.csv`, and
+   `package.xml` — and an **Open summary** notification appears
 
 Deploy to your org when ready:
 
@@ -67,7 +70,7 @@ sf project deploy start --source-dir force-app/main/default/labels
 sf project deploy start --source-dir force-app/main/default/classes
 ```
 
-Or use **Deploy to Org** from the Command Palette if you have a Pro license.
+Or use **Deploy to Org** from the Command Palette (a Paid feature — requires a license).
 
 ## Scan a whole project (Audit Report)
 
@@ -75,10 +78,11 @@ To see every hard-coded string across your project:
 
 1. Right-click any folder in the Explorer → **Label Alchemy: Scan Folder**
    Or press `Cmd+Shift+P` → **Label Alchemy: Scan Folder** → pick a folder
-2. The **Audit Report** opens — total count, by component type, by file, with per-file drill-down
-3. From the Audit Report, click **Convert to Labels** to apply bulk conversions [Pro]
+2. The **Audit Report** opens — total count, by component type, by file, with per-file drill-down,
+   and an estimated manual-conversion time
+3. From the Audit Report, click **Convert to Labels** to apply bulk conversions [Paid]
 
-The folder scan and Audit Report are free. Bulk convert requires a Pro license.
+The folder scan and Audit Report are free. Bulk convert requires a license.
 
 ## Optional: Enable AI naming
 
@@ -98,4 +102,4 @@ file or logged.
 - [All features →](/features/)
 - [Provider setup guide →](/providers/)
 - [Full FAQ →](/faq/)
-- [Activate a Pro license →](/license-activation/)
+- [Activate a license →](/license-activation/)

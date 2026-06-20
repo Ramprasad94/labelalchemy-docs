@@ -36,6 +36,27 @@ requirement.
 Your API key is stored in VS Code's encrypted secret storage — never in `settings.json`, never
 logged, never visible in plain text.
 
+## Naming scope & tuning
+
+AI naming has two scopes (`labelAlchemy.aiNamingScope`):
+
+- **Per-file (`chunk`) — Free:** each file is named from its own context.
+- **Project-wide (`project`) — requires a license:** also reads your existing
+  `CustomLabels.labels-meta.xml`, so an identical string reuses its existing label and new names
+  follow your project's convention. Without a license, AI naming falls back to per-file scope.
+
+Additional settings shape the output (all only apply when AI naming is on):
+
+| Setting | Effect |
+|---------|--------|
+| `aiNamingStyle` | `concise` / `descriptive` / `domainRich` — how much component/domain context folds into a name |
+| `labelNameCase` | `snake` (default) or `pascal` for new names (existing/reused labels are never recased) |
+| `aiNamingGuidance` | Free-text instructions appended verbatim to the prompt (e.g. "prefix with the module name") |
+| `aiGenerateDescriptions` | Also write a short Description for each label (uses extra output tokens) |
+
+Whatever the model returns is always sanitized to a valid Salesforce name, and every name stays
+editable in the diff panel before you approve.
+
 ## Supported providers
 
 ### Anthropic (Claude)

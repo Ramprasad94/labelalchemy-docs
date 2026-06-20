@@ -55,7 +55,7 @@ is sent to any server outside your machine.
 
 ## License validation
 
-If you have a Pro license, Label Alchemy contacts the Lemon Squeezy licensing server to
+If you have a license, Label Alchemy contacts the Lemon Squeezy licensing server to
 validate your license key. This request includes:
 
 - Your license key
@@ -68,7 +68,7 @@ Validation occurs:
 - Every 7 days while the extension is active
 - On re-activation after a restart
 
-If validation cannot reach the server, a 3-day grace period applies before Pro features are
+If validation cannot reach the server, a 3-day grace period applies before paid features are
 restricted. A warning is shown after 1 day of failed validation.
 
 ## Secret storage
