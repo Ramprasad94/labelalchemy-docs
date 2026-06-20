@@ -1,0 +1,35 @@
+/* Label Alchemy docs — brand theming
+   Brand: indigo #6366f1 / violet #a78bfa, Inter + JetBrains Mono */
+
+:root {
+	/* Typography */
+	--sl-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--sl-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+	/* Accent palette derived from brand indigo #6366f1 */
+	--sl-color-accent-low: #1e1b4b;
+	--sl-color-accent: #6366f1;
+	--sl-color-accent-high: #c7d2fe;
+
+	--sl-color-text-accent: #a5b4fc;
+}
+
+/* Light theme: keep indigo accent legible on white */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #e0e7ff;
+	--sl-color-accent: #4f46e5;
+	--sl-color-accent-high: #312e81;
+	--sl-color-text-accent: #4f46e5;
+}
+
+/* Brand gradient on the hero/title links and primary CTAs */
+.sl-link-button.primary {
+	background: linear-gradient(135deg, #4f46e5, #6366f1);
+	border-color: transparent;
+	box-shadow: 0 0 16px rgba(99, 102, 241, 0.35);
+}
+
+/* Violet tint on inline code + selection to echo the landing page */
+::selection {
+	background: rgba(167, 139, 250, 0.3);
+}

@@ -1,0 +1,58 @@
+---
+title: Label Alchemy docs
+description: Convert hard-coded Salesforce strings into Custom Labels — right inside VS Code. Deterministic by default, AI-assisted naming optional (BYOK).
+template: splash
+hero:
+  tagline: Convert hard-coded Salesforce strings into Custom Labels — right inside VS Code. Deterministic by default, AI-assisted naming optional (BYOK).
+  image:
+    dark: ../../assets/logo-dark.svg
+    light: ../../assets/logo-light.svg
+  actions:
+    - text: Install
+      link: /install/
+      icon: right-arrow
+      variant: primary
+    - text: Quick Start
+      link: /quick-start/
+      icon: rocket
+    - text: Marketplace
+      link: https://marketplace.visualstudio.com/items?itemName=ramprasad94.labelalchemy
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Start here
+
+<CardGrid stagger>
+	<Card title="Install" icon="download">
+		Add Label Alchemy to VS Code in under a minute. [Install guide →](/install/)
+	</Card>
+	<Card title="Quick Start" icon="rocket">
+		Convert your first string to a Custom Label in 5 minutes. [Quick Start →](/quick-start/)
+	</Card>
+	<Card title="AI naming (BYOK)" icon="setting">
+		Optional, opt-in. Bring your own key — or run a local model for free. [Provider setup →](/providers/)
+	</Card>
+	<Card title="License activation" icon="approve-check">
+		Enter your Pro key, machine limits, and the grace period explained. [Activation →](/license-activation/)
+	</Card>
+</CardGrid>
+
+## Learn more
+
+<CardGrid>
+	<Card title="How it works" icon="open-book">
+		The five-stage pipeline: scan → name → review → apply → deploy. [Read →](/how-it-works/)
+	</Card>
+	<Card title="Features" icon="puzzle">
+		Scanner, naming engine, diff review, audit report, deploy. [See all →](/features/)
+	</Card>
+	<Card title="Privacy" icon="shield">
+		What stays local, what's sent when AI naming is on. [Privacy →](/privacy/)
+	</Card>
+	<Card title="Troubleshooting & FAQ" icon="question">
+		Common issues and answers. [Troubleshooting →](/troubleshooting/) · [FAQ →](/faq/)
+	</Card>
+</CardGrid>
