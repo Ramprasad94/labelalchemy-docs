@@ -126,9 +126,11 @@ A folder-wide read-only scan that shows every hard-coded string organized by fil
 Free. Use it to understand the scope of work before committing to any conversions.
 
 **Does Label Alchemy handle Salesforce namespace prefixes?**
-The default mode uses `c.` as the label namespace (standard developer edition namespace). If
-your org has a custom namespace, set it via the `labelAlchemy.labelPrefix` configuration. The
-prefix is prepended to all generated names.
+Generated label references use the default `c.` namespace (`$Label.c.MyLabel`,
+`@salesforce/label/c.MyLabel`), which works in any org without a managed namespace. Custom
+managed-package namespaces in references aren't configurable yet. Separately, the
+`labelAlchemy.labelPrefix` setting prepends a string (e.g. `MyApp_`) to every generated label
+**name** for grouping and uniqueness — it does not change the `c.` reference namespace.
 
 ## Licensing and pricing
 
