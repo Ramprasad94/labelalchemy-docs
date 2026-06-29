@@ -6,6 +6,12 @@ description: Install Label Alchemy and convert your first Salesforce string to a
 Convert your first Salesforce string to a Custom Label in under 5 minutes. No API key required for
 the default setup.
 
+:::note[Coming soon]
+Label Alchemy isn't on the VS Code Marketplace yet — it's launching shortly, so Step 1 won't work
+until then. **[Join early access](https://labelalchemy.dev/#early-access)** to get notified at launch;
+the rest of this guide shows exactly what the flow will look like.
+:::
+
 ## Step 1 — Install
 
 **From the VS Code Extensions panel:**

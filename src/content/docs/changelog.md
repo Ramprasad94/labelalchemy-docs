@@ -6,6 +6,12 @@ description: Where to find Label Alchemy release notes — the canonical changel
 The canonical, per-version release notes for Label Alchemy live with the published extension, not
 in these docs. This avoids a second copy that drifts out of date.
 
+:::note[Coming soon]
+Label Alchemy hasn't been released yet, so there are no published release notes — and the
+Marketplace/Releases links below will go live at launch. **[Join early access](https://labelalchemy.dev/#early-access)**
+to be notified of the first release.
+:::
+
 ## Where to find release notes
 
 - 📦 **VS Code Marketplace** — the [Changelog tab on the listing](https://marketplace.visualstudio.com/items/ramprasad94.labelalchemy/changelog)

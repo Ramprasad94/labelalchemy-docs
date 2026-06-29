@@ -3,6 +3,12 @@ title: License activation
 description: How to activate a Label Alchemy license — entering your key, moving it between machines, the offline grace period, and how the perpetual license + update window works.
 ---
 
+:::note[Coming soon]
+Label Alchemy is launching shortly and isn't available yet, so licenses aren't on sale until
+release. This page explains how activation will work. **[Join early access](https://labelalchemy.dev/#early-access)**
+to get the founding-member offer first when it goes live.
+:::
+
 Label Alchemy's free tier needs no account and no license. **Paid features** — bulk convert, deploy
 to org, project-wide AI naming, custom denylist, diverging-name duplicate detection, and Audit CSV
 export — are unlocked with a license key from your purchase.

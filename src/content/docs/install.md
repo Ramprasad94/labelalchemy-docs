@@ -1,10 +1,17 @@
 ---
 title: Install
-description: Install Label Alchemy in VS Code from the Marketplace, the Extensions panel, or the command line, and confirm it activated.
+description: How to install Label Alchemy in VS Code once it launches on the Marketplace — and how to get notified before then.
 ---
 
-Label Alchemy is a VS Code extension. Installing takes under a minute, and the free tier works
-immediately — no account and no API key required.
+:::caution[Not on the Marketplace yet]
+Label Alchemy is **launching soon** and isn't published to the VS Code Marketplace yet, so the
+install steps below won't work until release. **[Join the early-access list](https://labelalchemy.dev/#early-access)**
+and we'll email you the moment it's live (with the founding-member offer first). The steps below are
+exactly how you'll install it on day one.
+:::
+
+Label Alchemy is a VS Code extension. Once it's released, installing takes under a minute, and the
+free tier works immediately — no account and no API key required.
 
 ## Requirements
 
